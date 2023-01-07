@@ -1,8 +1,8 @@
 <?php
 
-  include '../lib/config.php';
+  include '../configuracion/config.php';
 
-  $query = "SELECT * from pronosticobasico WHERE Estado=0";
+  $query = "SELECT * from pronosticobasico";
   $result = mysqli_query($connection, $query);
   if(!$result) {
     die('Query Failed'. mysqli_error($connection));

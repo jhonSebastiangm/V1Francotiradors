@@ -2,7 +2,7 @@
 	session_start(); //Inicia una nueva sesión o reanuda la existente
 	
 //Evaluamos si existe la variable de sesión id_usuario, si no existe redirigimos al index
-	if(empty($_SESSION["usuario"])){
+	if(empty($_SESSION["NombreUsuario"])){
 		header("Location: ../index.php");
 	}
 

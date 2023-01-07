@@ -1,6 +1,6 @@
 <?php
 
-  include '../lib/config.php';
+  include '../configuracion/config.php';
   $id = $_POST['id'];
   $query = "SELECT * from pronosticobasico WHERE id='$id'";
   $result = mysqli_query($connection, $query);

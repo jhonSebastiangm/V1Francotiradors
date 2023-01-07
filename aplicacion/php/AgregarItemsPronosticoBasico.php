@@ -1,6 +1,6 @@
 <?php
 
-    include '../lib/config.php';
+    include '../configuracion/config.php';
 
 if(isset($_POST['Descripcion'])) {
     $queryObtenerId = "SELECT * FROM pronosticobasico ORDER BY id DESC LIMIT 1";

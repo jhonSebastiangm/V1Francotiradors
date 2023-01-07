@@ -11,21 +11,21 @@
 
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-  <link rel="stylesheet" href="css/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="css/jquery-ui.css">
-  <link rel="stylesheet" href="css/owl.carousel.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../web/css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../web/css/jquery-ui.css">
+  <link rel="stylesheet" href="../web/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../web/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../web/css/owl.theme.default.min.css">
 
-  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../web/css/jquery.fancybox.min.css">
 
-  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../web/css/bootstrap-datepicker.css">
 
-  <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="../web/fonts/flaticon/font/flaticon.css">
 
-  <link rel="stylesheet" href="css/aos.css">
+  <link rel="stylesheet" href="../web/css/aos.css">
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="../web/css/style.css">
 
 
 
@@ -51,7 +51,7 @@
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <a href="index.html">
-              <img src="images/logo.png" alt="Logo">
+              <img src="../web/images/logo.png" alt="Logo">
             </a>
           </div>
           <div class="ml-auto">
@@ -61,7 +61,7 @@
                 <li><a href="matches.html" class="nav-link">Pronosticos</a></li>
                 <li><a href="players.html" class="nav-link">Participantes</a></li>
                 <li><a href="blog.html" class="nav-link">Temas</a></li>
-                <li><a href="login.php" class="nav-link">Inicio/Registro</a></li>
+                <li><a href="../aplicacion/vistas/login/login.php" class="nav-link">Inicio/Registro</a></li>
               </ul>
             </nav>
 
@@ -73,7 +73,7 @@
 
     </header>
 
-    <div class="hero overlay" style="background-image: url('images/bg_3.jpg');">
+    <div class="hero overlay" style="background-image: url('../web/images/bg_3.jpg');">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-5 ml-auto">
@@ -129,24 +129,24 @@
   </div>
   <!-- .site-wrap -->
 
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/jquery-ui.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/jquery.countdown.min.js"></script>
-  <script src="js/bootstrap-datepicker.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.fancybox.min.js"></script>
-  <script src="js/jquery.sticky.js"></script>
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="../web/js/jquery-3.3.1.min.js"></script>
+  <script src="../web/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../web/js/jquery-ui.js"></script>
+  <script src="../web/js/popper.min.js"></script>
+  <script src="../web/js/bootstrap.min.js"></script>
+  <script src="../web/js/owl.carousel.min.js"></script>
+  <script src="../web/js/jquery.stellar.min.js"></script>
+  <script src="../web/js/jquery.countdown.min.js"></script>
+  <script src="../web/js/bootstrap-datepicker.min.js"></script>
+  <script src="../web/js/jquery.easing.1.3.js"></script>
+  <script src="../web/js/aos.js"></script>
+  <script src="../web/js/jquery.fancybox.min.js"></script>
+  <script src="../web/js/jquery.sticky.js"></script>
+  <script src="../web/js/jquery.mb.YTPlayer.min.js"></script>
 
 
-  <script src="js/main.js"></script>
-  <script src="js/graficos.js"></script>
+  <script src="../web/js/main.js"></script>
+  <script src="../web/js/graficos.js"></script>
   <script src="index.js"></script>
 
 </body>

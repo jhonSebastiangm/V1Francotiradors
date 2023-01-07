@@ -1,6 +1,6 @@
 <?php
 
-    include '../lib/config.php';
+    include '../configuracion/config.php';
 
 if(isset($_POST['IdPronosticoResultado'])) {
   $IdPronosticoResultado = $_POST['IdPronosticoResultado']; 

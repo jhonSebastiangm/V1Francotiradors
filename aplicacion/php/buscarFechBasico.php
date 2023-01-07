@@ -1,6 +1,6 @@
 <?php
 
-  include '../lib/config.php';
+  include '../configuracion/config.php';
 
   $query = "select * from fechapronosticobasico order by id desc limit 1";
   $result = mysqli_query($connection, $query);

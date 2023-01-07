@@ -2,8 +2,8 @@
 	session_start(); //Inicia una nueva sesión o reanuda la existente
 	
 //Evaluamos si existe la variable de sesión id_usuario, si no existe redirigimos al index
-	if(empty($_SESSION["usuario"])){
-		header("Location: ../index.php");
+	if(empty($_SESSION["NombreUsuario"])){
+		header("Location: ../login/login.php");
 	}
 
   
@@ -21,23 +21,23 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../fonts/icomoon/style.css">
+  <link rel="stylesheet" href="../../web/fonts/icomoon/style.css">
 
-  <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="../css/jquery-ui.css">
-  <link rel="stylesheet" href="../css/owl.carousel.min.css">
-  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../../web/css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../../web/css/jquery-ui.css">
+  <link rel="stylesheet" href="../../web/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../../web/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../../web/css/owl.theme.default.min.css">
 
-  <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../../web/css/jquery.fancybox.min.css">
 
-  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../../web/css/bootstrap-datepicker.css">
 
-  <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="../../web/fonts/flaticon/font/flaticon.css">
 
-  <link rel="stylesheet" href="../css/aos.css">
+  <link rel="stylesheet" href="../../web/css/aos.css">
 
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../../web/css/style.css">
 
 
 
@@ -69,11 +69,11 @@
           <div class="ml-auto">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-               
-                <li><a href="administrarPronosticosGratuitos.php" class="nav-link">Pronosticos Gratuitos</a></li>
+              <li><a href="administrarPronosticos.php" class="nav-link">Pronosticos</a></li>
+                <!-- <li><a href="administrarPronosticosGratuitos.php" class="nav-link">Pronosticos Gratuitos</a></li>
                 <li><a href="administrarPronosticosBasicos.php" class="nav-link">Pronosticos Basicos</a></li>
                 <li><a href="administrarPronosticosSuperiores.php" class="nav-link">Pronosticos Superiores</a></li>
-              </ul>
+              </ul> -->
             </nav>
 
             <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black float-right text-white"><span
@@ -215,24 +215,24 @@
   </div>
   <!-- .site-wrap -->
 
-  <script src="../js/jquery-3.3.1.min.js"></script>
-  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="../js/jquery-ui.js"></script>
-  <script src="../js/popper.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/owl.carousel.min.js"></script>
-  <script src="../js/jquery.stellar.min.js"></script>
-  <script src="../js/jquery.countdown.min.js"></script>
-  <script src="../js/bootstrap-datepicker.min.js"></script>
-  <script src="../js/jquery.easing.1.3.js"></script>
-  <script src="../js/aos.js"></script>
-  <script src="../js/jquery.fancybox.min.js"></script>
-  <script src="../js/jquery.sticky.js"></script>
-  <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="../../web/js/jquery-3.3.1.min.js"></script>
+  <script src="../../web/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../../web/js/jquery-ui.js"></script>
+  <script src="../../web/js/popper.min.js"></script>
+  <script src="../../web/js/bootstrap.min.js"></script>
+  <script src="../../web/js/owl.carousel.min.js"></script>
+  <script src="../../web/js/jquery.stellar.min.js"></script>
+  <script src="../../web/js/jquery.countdown.min.js"></script>
+  <script src="../../web/js/bootstrap-datepicker.min.js"></script>
+  <script src="../../web/js/jquery.easing.1.3.js"></script>
+  <script src="../../web/js/aos.js"></script>
+  <script src="../../web/js/jquery.fancybox.min.js"></script>
+  <script src="../../web/js/jquery.sticky.js"></script>
+  <script src="../../web/js/jquery.mb.YTPlayer.min.js"></script>
 
 
-  <script src="../js/main.js"></script>
-  <script src="../js/graficos.js"></script>
+  <script src="..../web/js/main.js"></script>
+  <script src="../../web/js/graficos.js"></script>
 
 </body>
 

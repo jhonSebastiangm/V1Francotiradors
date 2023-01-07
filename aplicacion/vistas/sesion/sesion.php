@@ -2,8 +2,8 @@
 	session_start(); //Inicia una nueva sesión o reanuda la existente
 	
 //Evaluamos si existe la variable de sesión id_usuario, si no existe redirigimos al index
-	if(empty($_SESSION["usuario"])){
-		header("Location: ../index.php");
+	if(empty($_SESSION["NombreUsuario"])){
+		header("Location: ../login/login.php");
 	}
 
   
@@ -21,23 +21,23 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../fonts/icomoon/style.css">
+  <link rel="stylesheet" href="../../../web/fonts/icomoon/style.css">
 
-  <link rel="stylesheet" href="../css/bootstrap/bootstrap.css">
-  <link rel="stylesheet" href="../css/jquery-ui.css">
-  <link rel="stylesheet" href="../css/owl.carousel.min.css">
-  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
-  <link rel="stylesheet" href="../css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../../../web/css/bootstrap/bootstrap.css">
+  <link rel="stylesheet" href="../../../web/css/jquery-ui.css">
+  <link rel="stylesheet" href="../../../web/css/owl.carousel.min.css">
+  <link rel="stylesheet" href="../../../web/css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="../../../web/css/owl.theme.default.min.css">
 
-  <link rel="stylesheet" href="../css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="../../../web/css/jquery.fancybox.min.css">
 
-  <link rel="stylesheet" href="../css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="../../../web/css/bootstrap-datepicker.css">
 
-  <link rel="stylesheet" href="../fonts/flaticon/font/flaticon.css">
+  <link rel="stylesheet" href="../../../web/fonts/flaticon/font/flaticon.css">
 
-  <link rel="stylesheet" href="../css/aos.css">
+  <link rel="stylesheet" href="../../../web/css/aos.css">
 
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../../../web/css/style.css">
 
 
 
@@ -63,7 +63,7 @@
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <a href="index.html">
-              <img src="../images/logo.png" alt="Logo">
+              <img src="../../../web/images/logo.png" alt="Logo">
             </a>
           </div>
           <div class="ml-auto">
@@ -75,7 +75,7 @@
                 <li><a href="../players.html" class="nav-link">Participantes</a></li>
                 <li><a href="../blog.html" class="nav-link">Planes</a></li>
                 <?php if($_SESSION['tipoUsuario'] == 1) { ?>   
-                 <li><a href="administrar.php" class="nav-link">Administrar</a></li>
+                 <li><a href="../../php/administrar.php" class="nav-link">Administrar</a></li>
                 <?php } ?>   
                 <li><a href="logout.php" class="nav-link">Cerrar Sesion</a></li>
               </ul>
@@ -136,7 +136,7 @@
 
       </div>
 
-      <div class="row justify-content-center">
+      <!-- <div class="row justify-content-center">
         <div class="col-lg-7 text-center">
           <div class="custom-pagination">
             <a href="#">1</a>
@@ -146,7 +146,29 @@
             <a href="#">5</a>
           </div>
         </div>
-      </div>
+      </div> -->
+      <table class="table">
+      <thead>
+    <th>Banco</th>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td data-label="Banco"> <input type="text" id="Banco" name="Banco" class="form-control input_user textoNegro"  placeholder="Banco">  </td>
+    </tr>
+  </tbody>
+      </table>
+
+      <table class="table">
+  <thead>
+    <th>Descripcion</th>
+    <th>Cuota</th>
+    <th>Estado</th>
+  </thead>
+  <tbody id="pronosticos">
+ </tbody>
+ <input type="text" id="ValorApuesta" name="ValorApuesta" class="form-control input_user textoNegro"  placeholder="Valor Apuesta" disabled>
+</table>
     </div>
 
 
@@ -171,7 +193,7 @@
             <span class="score">4-1</span>
             <div class="team-1 w-50">
               <div class="team-details w-100 text-center">
-                <img src="../images/logo_1.png" alt="Image" class="img-fluid">
+                <img src="../../../web/images/logo_1.png" alt="Image" class="img-fluid">
                 <h3>LA LEGA <span>(win)</span></h3>
                 <ul class="list-unstyled">
                   <li>Anja Landry (7)</li>
@@ -183,7 +205,7 @@
             </div>
             <div class="team-2 w-50">
               <div class="team-details w-100 text-center">
-                <img src="../images/logo_2.png" alt="Image" class="img-fluid">
+                <img src="../../../web/images/logo_2.png" alt="Image" class="img-fluid">
                 <h3>JUVENDU <span>(loss)</span></h3>
                 <ul class="list-unstyled">
                   <li>Macauly Green (3)</li>
@@ -268,25 +290,25 @@
   </div>
   <!-- .site-wrap -->
 
-  <script src="../js/jquery-3.3.1.min.js"></script>
-  <script src="../js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="../js/jquery-ui.js"></script>
-  <script src="../js/popper.min.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/owl.carousel.min.js"></script>
-  <script src="../js/jquery.stellar.min.js"></script>
-  <script src="../js/jquery.countdown.min.js"></script>
-  <script src="../js/bootstrap-datepicker.min.js"></script>
-  <script src="../js/jquery.easing.1.3.js"></script>
-  <script src="../js/aos.js"></script>
-  <script src="../js/jquery.fancybox.min.js"></script>
-  <script src="../js/jquery.sticky.js"></script>
-  <script src="../js/jquery.mb.YTPlayer.min.js"></script>
+  <script src="../../../web/js/jquery-3.3.1.min.js"></script>
+  <script src="../../../web/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="../../../web/js/jquery-ui.js"></script>
+  <script src="../../../web/js/popper.min.js"></script>
+  <script src="../../../web/js/bootstrap.min.js"></script>
+  <script src="../../../web/js/owl.carousel.min.js"></script>
+  <script src="../../../web/js/jquery.stellar.min.js"></script>
+  <script src="../../../web/js/jquery.countdown.min.js"></script>
+  <script src="../../../web/js/bootstrap-datepicker.min.js"></script>
+  <script src="../../../web/js/jquery.easing.1.3.js"></script>
+  <script src="../../../web/js/aos.js"></script>
+  <script src="../../../web/js/jquery.fancybox.min.js"></script>
+  <script src="../../../web/js/jquery.sticky.js"></script>
+  <script src="../../../web/js/jquery.mb.YTPlayer.min.js"></script>
 
 
-  <script src="../js/main.js"></script>
-  <script src="../js/graficos.js"></script>
-  <script src="../js/sesion.js"></script>
+  <script src="../../../web/js/main.js"></script>
+  <script src="../../../web/js/graficos.js"></script>
+  <script src="../../../web/js/sesion.js"></script>
 
 </body>
 

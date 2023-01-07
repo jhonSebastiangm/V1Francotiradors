@@ -1,6 +1,6 @@
 <?php
 
-include '../lib/config.php';
+include '../configuracion/config.php';
 
 if(isset($_POST['idItemResultado'])) {
   # echo $_POST['name'] . ', ' . $_POST['description'];
@@ -23,6 +23,34 @@ if(isset($_POST['idItemResultado'])) {
 
   if (!$resultUpdate) {
     die('queryUpdate Failed.');
+  }
+
+  if ($cumple==1) {
+    $queryGano = "UPDATE contadorperdidas SET numero = 0";
+    $resultGano = mysqli_query($connection, $queryGano);
+    if (!$resultGano) {
+      die('queryGano Failed.');
+    }
+  }
+
+  if ($cumple==0) {
+    $query = "SELECT numero from contadorperdidas";
+    $result = mysqli_query($connection, $query);
+    if(!$result) {
+      die('Query Failed'. mysqli_error($connection));
+    }
+  
+    $json = array();
+    while($row = mysqli_fetch_array($result)) {
+      $numero =  $row['numero'];
+    }
+
+    $numero = $numero+1;
+    $queryUpdateNumero = "UPDATE contadorperdidas SET numero = '$numero'";
+    $resultUpdateNumero = mysqli_query($connection, $queryUpdateNumero);
+    if (!$resultUpdateNumero) {
+      die('queryUpdateNumero Failed.');
+    }
   }
 
   echo "Resultado Item Pronostico Basico Agregado Con Exito";  
