@@ -16,8 +16,9 @@ $(document).ready(function () {
     $.post(url, postData, (response) => {
       console.log(response);
       let usuarios = JSON.parse(response);
+      console.log(usuarios);
       console.log("esta es la respuesta"+" "+usuarios);
-      if(response== 'null' || response=='' || response.activo== 0){
+      if(usuarios== 'null' || usuarios=='' || usuarios.activo== 0 || usuarios.contrasena=='no'){
        alertify.alert('Inicio Denegado', usuarios.Nombreusuario+' Usuario Null O Incorrecto', function(){ alertify.error('No Conectado'); }); 
       }else{
       //alertify.alert('Inicio Exitoso', response+'Se Encuentra Logueado', function(){ alertify.success('Conectado'); });    

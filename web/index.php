@@ -7,11 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="fonts/icomoon/style.css">
 
   <link rel="stylesheet" href="../web/css/bootstrap/bootstrap.css">
+  
   <link rel="stylesheet" href="../web/css/jquery-ui.css">
   <link rel="stylesheet" href="../web/css/owl.carousel.min.css">
   <link rel="stylesheet" href="../web/css/owl.theme.default.min.css">
@@ -51,16 +52,12 @@
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <a href="index.html">
-              <img src="../web/images/logo.png" alt="Logo">
+              <img class="logo">
             </a>
           </div>
           <div class="ml-auto">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-                <li class="active"><a href="index.html" class="nav-link">Inicio</a></li>
-                <li><a href="matches.html" class="nav-link">Pronosticos</a></li>
-                <li><a href="players.html" class="nav-link">Participantes</a></li>
-                <li><a href="blog.html" class="nav-link">Temas</a></li>
                 <li><a href="../aplicacion/vistas/login/login.php" class="nav-link">Inicio/Registro</a></li>
               </ul>
             </nav>
@@ -73,32 +70,29 @@
 
     </header>
 
-    <div class="hero overlay" style="background-image: url('../web/images/bg_3.jpg');">
+    <div class="hero overlay" style="background-image: url('../web/images/soccer-players-action-professional-stadium.jpg');">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-5 ml-auto">
-            <h1 class="text-white">Pronosticos</h1>
+            <h1>Pronosticos</h1>
             <p>Somos Un Grupo De Internautas Deportvos Con Amplio Tiempo En Las Apuestas Deportivas, Este Sitio Web Es Un Espacio Para Compartir Estos Conocimientos Y Mejorar Nuestras Finanzas.</p>
-            <h2>Proximo Pronostico</h2>
+            <!-- <h2>Proximo Pronostico</h2>
             <div id="date-countdown"></div>
             <div id="graficos">
               <h2>Aciertos.</h2>
               <figure class="horizontal"><?php echo("10");?>%</figure>
-            </div>
+            </div> -->
             <div>
               <p>
-                <a href="#" class="btn btn-primary py-3 px-4 mr-3">Plan Profesional</a>
-                <a href="#" class="btn btn-primary py-3 px-4 mr-3">Plan Basico</a>
-              </p>  
+                <a href="../aplicacion/vistas/login/login.php" class="btn btn-primary py-3 px-4 mr-3">Inicio</a>
+                <a href="../aplicacion/vistas/login/registro.php" class="btn btn-primary py-3 px-4 mr-3">Registro</a>
+              </p>
             </div>
-
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="site-section bg-dark" id="PronosticFree">
-  </div> <!-- .site-section -->
  
 
     

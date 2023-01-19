@@ -1,11 +1,142 @@
 /* Base */
 
+body{
+  background-color:#ecf0f1;
+  font-family: 'Poppins';
+}
+.containerRegister {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+
+
+@media (min-width: 320) {
+  .container {
+    width: 310px;
+    
+  }
+  .textoQr{
+    float: none; top: 0px; right: 0px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+  .textoQr{
+    float: right; top: 258px; right: 211px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+  .textoQr{
+    float: right; top: 258px; right: 211px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+  .textoQr{
+    float: right; top: 258px; right: 211px;
+  }
+}
+.codigoQr{
+width: 390px;
+height: 392px;
+/* UI Properties */
+background: transparent url('../images/QRFRANCO.png') 0% 0% no-repeat padding-box;
+box-shadow: 4px 5px 6px #000000A8;
+opacity: 1;
+}
+
+.card {
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.15);
+  position: relative;
+  transition: all .2s ease-in-out;
+  background: #000000 0% 0% no-repeat padding-box;
+  padding: 20px;
+  border-radius: 5px;
+  width: 400px;
+  margin: 0 auto;
+  opacity: 0.7;
+}
+
+.card:hover {
+    /* box-shadow: 0 5px 22px 0 rgba(0,0,0,.25); */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+}
+.labelRegister{
+  margin: 10px 0;
+}
+
+
+.labelRegister, .pRegister {
+    display: block;
+    margin-bottom: 5px;
+    color: #777;
+    letter-spacing: 0.5px;
+  
+}
+.labelverde{
+  top: 381px;
+left: 680px;
+width: 141px;
+height: 60px;
+background: #AEFE00 0% 0% no-repeat padding-box;
+border-radius: 9px;
+opacity: 1;
+}
+
+.inputRegister, .textareaRegister {
+    margin: 0 0 20px 0;
+    padding: 12px 5%;
+    width: 90%;
+    border: 0;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    color: #2C3E50;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.titleRegister{
+  font-size: 3.444rem;
+  text-align: center;
+  
+}
+
+.btnRegister{
+  background-color:#2ECC71;
+  padding: 10px;
+  margin: 20px;
+  position: relative;
+  color: #FFF;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.btnRegister:hover {
+  box-shadow: 0 5px 22px 0 rgba(0,0,0,.25); 
+  transition: all .2s ease-in-out;
+
+}
+
 body {
   line-height: 1.7;
   color: gray;
   font-weight: 300;
-  background-color: #222831;
+  background: #252525 url('../images/FONDO.png') 0% 0% no-repeat padding-box;
   font-size: 16px; 
+  
 }
 /* Style the buttons that are used to open and close the accordion panel */
 .accordion {
@@ -19,6 +150,16 @@ body {
   outline: none;
   transition: 0.4s;
 }
+.logo{
+  top: 34px;
+left: 40px;
+width: 279px;
+height: 73px;
+/* UI Properties */
+background: transparent url('../images/LOGOFRANCO.png') 0% 0% no-repeat padding-box;
+box-shadow: 3px 3px 6px #000000A1;
+opacity: 1;
+}
 
 
 .table {
@@ -28,20 +169,24 @@ body {
 
 .table td,
 .table th {
+  color: white;
   padding: 12px 15px;
-  border: 1px solid #ddd;
+  border-radius: 18px;
+  /*border: 1px solid rgb(0, 0, 0);*/
   text-align: center;
   font-size: 16px;
 }
 
 .table th {
-  background-color: #92c9e6;
-  color: #ffffff;
+  color: #000000;
+  background: #AEFE00 0% 0% no-repeat padding-box;
+  border-radius: 18px;
+  opacity: 0.8;
 }
 
-.table tbody tr:nth-child(even) {
+/* .table tbody tr:nth-child(even) {
   background-color: #d1e8f5;
-}
+} */
 
 /*responsive*/
 
@@ -59,6 +204,7 @@ body {
   }
   .table tr {
     margin-bottom: 15px;
+    border-radius: 18px;
   }
   .table td {
     padding-left: 50%;
@@ -90,6 +236,19 @@ body {
   display: none;
   overflow: hidden;
 }
+
+.DivBonitos {
+  display: inline-block;
+  padding: 0 .5em .5em;
+  border: .15em solid black;
+  font: 900 2em/1.2 sans-serif;
+  border-radius: .25em;
+  width: 266px;
+  background-color: lavender;
+  border-radius: 18px;
+  opacity: 0.7;
+}
+
 #graficos {
   display: inline-block; 
   margin: .5em auto; 
@@ -108,7 +267,7 @@ body {
   background-color: gainsboro; 
   padding: 0; 
   border-right: solid 2.5em transparent; /* truco para compensar bg-position */
-  background-image: linear-gradient(red, red); 
+  background-image: linear-gradient(#AEFE00, #AEFE00); 
   background-repeat: no-repeat; 
   background-position: 2.5em 0; 
   background-size: 0 100%; 
@@ -120,14 +279,18 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #343a40 !important;
   }
   .user_card {
+    opacity: 0.8 !important;
+    background: #000000 0% 0% no-repeat padding-box;
+    box-shadow: 4px 4px 6px #000000;
+    border: 2px solid #AEFE00;
+    opacity: 0.2;
     height: 400px;
     width: 350px;
     margin-top: auto;
     margin-bottom: auto;
-    background: #f28b1a;
+
     position: relative;
     display: flex;
     justify-content: center;
@@ -160,7 +323,7 @@ body {
   }
   .login_btn {
     width: 100%;
-    background: #1b1d3b !important;
+    background: #AEFE00 !important;
     color: white !important;
   }
   .login_btn:focus {
@@ -171,7 +334,7 @@ body {
     padding: 0 2rem;
   }
   .input-group-text {
-    background: #1b1d3b !important;
+    background: #AEFE00 !important;
     color: white !important;
     border: 0 !important;
     border-radius: 0.25rem 0 0 0.25rem !important;
@@ -204,7 +367,7 @@ a {
 h1, h2, h3, h4, h5,
 .h1, .h2, .h3, .h4, .h5 {
   font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #fff; }
+  color: #AEFF00;}
 
 .border-2 {
   border-width: 2px; }
@@ -295,14 +458,21 @@ h1, h2, h3, h4, h5,
 .bg-black {
   background: #000; }
 
+  .textoNegro {
+    height: 43px;
+    border-radius: 4px;
+    background: none;
+    border-width: 1px;
+    color: rgb(0, 0, 0) !important;
+    border-color: rgba(255, 255, 255, 0.2);}
+
 .form-control {
   height: 43px;
   border-radius: 4px;
   background: none;
   border-width: 1px;
-  color: #fff !important;
-  border-color: rgba(255, 255, 255, 0.2);
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; }
+  color: rgb(255, 255, 255) !important;
+  border-color: rgba(255, 255, 255, 0.2);}
   .form-control:active, .form-control:focus {
     border-color: #ee1e46;
     background: none; }
@@ -784,7 +954,7 @@ h1, h2, h3, h4, h5,
   background-position: center center; }
   .hero, .hero > .container > .row {
     height: 100vh;
-    min-height: 500px; }
+    min-height: 671px; }
   .hero.overlay:before {
     content: "";
     position: absolute;
@@ -800,7 +970,7 @@ h1, h2, h3, h4, h5,
       .hero h1 {
         font-size: 2.5rem; } }
   .hero p {
-    color: rgba(255, 255, 255, 0.7); }
+    color: #AEFF00; }
 
 #date-countdown {
   margin-bottom: 20px; }
@@ -1141,10 +1311,10 @@ h1, h2, h3, h4, h5,
     border: none; }
 
 .footer-section {
-  padding: 70px 0;
+  padding: 8px 0;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.5);
-  background: #1a1e25; }
+  background: transparent url('../images/FONDO.png') 0% 0% no-repeat padding-box; }
   .footer-section .widget h3 {
     color: #fff;
     font-size: 18px;

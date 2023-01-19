@@ -70,6 +70,7 @@
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
               <li><a href="administrarPronosticos.php" class="nav-link">Pronosticos</a></li>
+              <li><a href="administrarUsuarios.php" class="nav-link">Usuarios</a></li>
                 <!-- <li><a href="administrarPronosticosGratuitos.php" class="nav-link">Pronosticos Gratuitos</a></li>
                 <li><a href="administrarPronosticosBasicos.php" class="nav-link">Pronosticos Basicos</a></li>
                 <li><a href="administrarPronosticosSuperiores.php" class="nav-link">Pronosticos Superiores</a></li>

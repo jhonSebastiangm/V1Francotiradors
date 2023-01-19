@@ -3,7 +3,7 @@
 	
 //Evaluamos si existe la variable de sesión id_usuario, si no existe redirigimos al index
 	if(empty($_SESSION["NombreUsuario"])){
-		header("Location: ../index.php");
+		header("Location: ../login/login.php");
 	}
 
   
@@ -21,7 +21,7 @@
 
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="../fonts/icomoon/style.css">
+  <link rel="stylesheet" href="../../web/fonts/icomoon/style.css">
 
   <link rel="stylesheet" href="../../web/css/bootstrap/bootstrap.css">
   <link rel="stylesheet" href="../../web/css/jquery-ui.css">
@@ -63,15 +63,16 @@
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <a href="index.html">
-              <img src="../images/logo.png" alt="Logo">
+              <img src="../../web/images/logo.png" alt="Logo">
             </a>
           </div>
           <div class="ml-auto">
             <nav class="site-navigation position-relative text-right" role="navigation">
               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
-               
-                <li><a href="administrar.php" class="nav-link">Administrar</a></li>
-                <!-- <li><a href="administrarPronosticosBasicos.php" class="nav-link">Pronosticos Basicos</a></li>
+              <li><a href="administrarPronosticos.php" class="nav-link">Pronosticos</a></li>
+              <li><a href="administrarUsuarios.php" class="nav-link">Usuarios</a></li>
+                <!-- <li><a href="administrarPronosticosGratuitos.php" class="nav-link">Pronosticos Gratuitos</a></li>
+                <li><a href="administrarPronosticosBasicos.php" class="nav-link">Pronosticos Basicos</a></li>
                 <li><a href="administrarPronosticosSuperiores.php" class="nav-link">Pronosticos Superiores</a></li>
               </ul> -->
             </nav>
@@ -90,121 +91,51 @@
 
   <div class="container">
       <div class="row p-4">
-        <div class="col-md-6" id="divPronostico">
-        <a class="navbar-brand" href="#">Agregar Pronosticos</a>
+        <!-- <div class="col-md-5">
+        <a class="navbar-brand" href="#">Usuarios</a>
           <div class="card">
             <div class="card-body">
               
-              <!-- FORM TO ADD TASKS -->
-              <form id="PronosticoBasico">
-                <input type="hidden" id="pronosticoId">
+     
+              <form id="task-form">
+                <input type="hidden" id="taskId">
                 <div class="form-group">
-                  <input type="text" id="tipoPronostico" placeholder="Tipo Pronostico">
-                </div>     
+                  <input type="text" id="name" placeholder="" class="form-control">
+                </div>
                 <div class="form-group">
-                  <input type="date" id="fechaJuego">
-                </div>   
+                  <textarea id="description" cols="30" rows="10" class="form-control" placeholder="Task Description"></textarea>
+                </div>
                 
-                <div class="form-group">
-                  <input type="text" id="Liga" placeholder="Liga">
-                </div>        
-                <div class="form-group">
-                  <input type="text" id="cuota" placeholder="Cuota">
-                </div>    
-                <div class="form-group">
-                  <input type="text" id="url" placeholder="Video">
-                </div>          
                 <button type="submit" class="btn btn-primary btn-block text-center">
-                  Crear Pronostico
+                  Save Task
                 </button>
               </form>
-              
             </div>
           </div>
-        </div>
-
-        <div class="col-md-6" id="divItem">
-        <a class="navbar-brand" href="#">Crear Item</a>
-          <div class="card">
-            <div class="card-body">
-              
-              <!-- FORM TO ADD TASKS -->
-              <form id="ItemsPronosticoBasico">
-                <input type="hidden" id="itemPronosticoId">
-                <div class="form-group">
-                  <input type="text" id="Descripcion" placeholder="Descripcion">
-                </div>   
-                <div class="form-group">
-                  <input type="text" id="Resutado" placeholder="Resutado">
-                </div>                 
-                <button type="submit" class="btn btn-primary btn-block text-center">
-                  Crear Item
-                </button>
-                <button onclick="location.href='https://francotiradoresdeportivos.com/aplicacion/php/administrarPronosticos.php'" type="button" class="btn btn-primary btn-block text-center">
-                  Finalizar Pronostico</button>
-              </form>
-              
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-6" id="divResultado">
-        <a class="navbar-brand" href="#">Crear Resultado</a>
-          <div class="card">
-            <div class="card-body">
-              
-              <!-- FORM TO ADD TASKS -->
-              <form id="PronosticoBasicoCrearResultado">
-                <input type="hidden" id="IdPronosticoResultado">
-                <div class="form-group">
-                  <textarea id="descripcionResultado" cols="50" rows="0" placeholder="Description"></textarea>
-                </div> 
-                <div id="ItemsResultados" class="form-group">
-                <table class="table table-bordered table-sm">
-                <thead>
-                  <tr>
-            
-                    <td>Descripcion</td>
-                    <td>Resultado</td>
-                    <td>Guardar</td>
-                  </tr>
-                </thead>
-                <tbody id="resultadoItemsPronosticos"></tbody>
-                <input type="radio" id="si">
-                <label for="yes">yes</label>
-                <input type="radio" id="no">
-                <label for="no">no</label>
-                </table>
-
-                </div>               
-                <button type="submit" class="btn btn-primary btn-block text-center">
-                  Crear Resultado
-                </button>
-              </form>
-              
-            </div>
-          </div>
-        </div>
+        </div> -->
 
         <!-- TABLE  -->
-        <div class="col-md-6">
-        <a class="navbar-brand" href="#">Pronosticos Basicos</a>
+        <div class="col-md-7">
+          <div class="card my-4" id="task-result">
+            <div class="card-body">
+              <!-- SEARCH -->
+              <ul id="container"></ul>
+            </div>
+          </div>
+
           <table class="table table-bordered table-sm">
             <thead>
               <tr>
-                <td>Equipo 1</td>
-                <td>Equipo 2</td>
-                <td>fechaJuego</td>
-                <td>Liga</td>
-                <td>Resultado</td>
+                <td>Id</td>
+                <td>Nombre Usuario</td>
+                <td>Correo</td>
               </tr>
             </thead>
-            <tbody id="pronosticos"></tbody>
+            <tbody id="usuarios"></tbody>
           </table>
         </div>
       </div>
     </div>
-
   
 
     <footer class="footer-section">
@@ -303,8 +234,7 @@
 
   <script src="../../web/js/main.js"></script>
   <script src="../../web/js/graficos.js"></script>
-  <script src="../../web/js/fechaBasico.js">    </script>
-  <script src="../../web/js/administrarPronosticos.js"></script>
+  <script src="../../web/js/adminUsuarios.js"></script>
 
 </body>
 

@@ -206,7 +206,7 @@ $(document).ready(function () {
         ItemsPronosticoBasico.forEach(itembasico => {
           templateItemsBasico += `<span class="d-block">${itembasico.Descripcion}(${itembasico.Resutado})</span>`
         });
-        $("#itemsBasico" + id).html(templateItemsBasico);
+        $("#pronosticos" + id).html(templateItemsBasico);
       }
     });
   }
@@ -226,9 +226,11 @@ $(document).ready(function () {
           template += `
           <tr>
           <div id="itemsBasico${basico.id}"></div>
-          <td data-label="Descripcion">${basico.equipo1} vs ${basico.equipo2} liga: ${basico.Liga} fecha:${basico.fechaJuego} Estadio:${basico.Estadio}</td>
+          <td data-label="Descripcion">${basico.tipoPronostico} liga: ${basico.Liga} fecha:${basico.fechaJuego} </td>
+          <td data-label="Cuota" id="pronosticos${basico.id}"></td>
           <td data-label="Cuota">${basico.cuota}</td>
           <td data-label="Estado">${basico.Estado}</td>
+          <td data-label="ejemplo"><iframe width="270" height="150" src="${basico.url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" X-Frame-Options:SAMEORIGIN allowfullscreen></iframe></td>
         </tr>
         `
           CargarItemsBasico(basico.id);

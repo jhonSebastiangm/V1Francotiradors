@@ -11,11 +11,9 @@
   $json = array();
   while($row = mysqli_fetch_array($result)) {
     $json[] = array(
-      'equipo1' => $row['equipo1'],
-      'equipo2' => $row['equipo2'],
+      'tipoPronostico' => $row['tipoPronostico'],
       'fechaJuego' => $row['fechaJuego'],
       'Liga' => $row['Liga'],
-      'Estadio' => $row['Estadio'],
       'id' => $row['id']
     );
   }

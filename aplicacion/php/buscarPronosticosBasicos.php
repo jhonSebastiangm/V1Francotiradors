@@ -12,9 +12,11 @@
   while($row = mysqli_fetch_array($result)) {
     $json[] = array(
       'id' => $row['id'],
-      'equipo1' => $row['equipo1'],
-      'equipo2' => $row['equipo2'],
+      'tipoPronostico' => $row['tipoPronostico'],
       'fechaJuego' => $row['fechaJuego'],
+      'url' => $row['url'],
+      'Estado' => $row['Estado'],
+      'cuota' => $row['cuota'],
       'Liga' => $row['Liga']
     );
   }

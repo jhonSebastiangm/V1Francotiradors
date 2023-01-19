@@ -2,7 +2,7 @@
 
   include '../configuracion/config.php';
 
-  $query = "SELECT * from pronosticobasico";
+  $query = "SELECT * from pronosticobasico order by id desc limit 1";
   $result = mysqli_query($connection, $query);
   if(!$result) {
     die('Query Failed'. mysqli_error($connection));
@@ -11,11 +11,10 @@
   $json = array();
   while($row = mysqli_fetch_array($result)) {
     $json[] = array(
-      'equipo1' => $row['equipo1'],
-      'equipo2' => $row['equipo2'],
+      'tipoPronostico' => $row['tipoPronostico'],
       'fechaJuego' => $row['fechaJuego'],
       'Liga' => $row['Liga'],
-      'Estadio' => $row['Estadio'],
+      'url' => $row['url'],
       'Estado' => $row['Estado'],
       'cuota' => $row['cuota'],
       'id' => $row['id']

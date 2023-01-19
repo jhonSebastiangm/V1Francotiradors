@@ -12,7 +12,7 @@ if (isset($_POST['usuario'])) {
 
   $ingresar = new DTOLogin();
   $ingresar=$ingresar->IngresarXUsuario($usuario);
-  if ($ingresar->Nombreusuario != null && $ingresar->Nombreusuario == $usuario && $ingresar->contrasena == $contrasena) {
+  if ($ingresar->Nombreusuario == $usuario && $ingresar->contrasena == $contrasena) {
      if ($ingresar->activo == 1) {
        $_SESSION['id'] = $ingresar->id;
        $_SESSION['NombreUsuario'] = $ingresar->Nombreusuario;
@@ -31,6 +31,7 @@ if (isset($_POST['usuario'])) {
      $jsonstring = json_encode($ingresar);
      echo $jsonstring;
    } else {
+     $ingresar->contrasena="no";
      $jsonstring = json_encode($ingresar);
      echo $jsonstring;
    }

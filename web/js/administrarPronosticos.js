@@ -11,11 +11,11 @@ $(document).ready(function() {
     $('#PronosticoBasico').submit(e => {
       e.preventDefault();
       const postDataPronosticoBasico = {
-        Equipo1: $('#Equipo1').val(),
-        Equipo2: $('#Equipo2').val(),
+        tipoPronostico: $('#tipoPronostico').val(),
         fechaJuego: $('#fechaJuego').val(),
         Liga: $('#Liga').val(),
         Estadio: $('#Estadio').val(),
+        url:$('#url').val(),
         cuota: $('#cuota').val()
       };
       const url ='../../aplicacion/php/AgregarPronosticoBasico.php';
@@ -45,8 +45,15 @@ $(document).ready(function() {
 
     $('#PronosticoBasicoCrearResultado').submit(e => {
       e.preventDefault();
+      let cumple="";
+      if ($("#si").is(':checked')) {
+        cumple = 1;
+      }else if ($("#no").is(':checked')) {
+        cumple = 0;
+      }
       const postData = {
-        IdPronosticoResultado: $('#IdPronosticoResultado').val()
+        IdPronosticoResultado: $('#IdPronosticoResultado').val(),
+        cumple:cumple
       };
       const url ='../../aplicacion/php/ModificarEstadoPronosticoBasico.php';
       console.log(postData, url);
@@ -72,10 +79,9 @@ $(document).ready(function() {
                       <tr pronosticoId="${Pronostico.id}">
                       <td>
                       <a href="#" class="task-item">
-                        ${Pronostico.equipo1} 
+                        ${Pronostico.tipoPronostico} 
                       </a>
                       </td>
-                      <td>${Pronostico.equipo2}</td>
                       <td>${Pronostico.fechaJuego}</td>
                       <td>${Pronostico.Liga}</td>
                       <td>
@@ -103,7 +109,7 @@ $(document).ready(function() {
         console.log(response);
         const pronosticos = JSON.parse(response);
         idPronostico = pronosticos.id;
-        $('#descripcionResultado').val(pronosticos.equipo1+' vs '+ pronosticos.equipo2+' , Dia: '+pronosticos.fechaJuego+' , Por: '+pronosticos.Liga+' En: '+pronosticos.Estadio);
+        $('#descripcionResultado').val(pronosticos.tipoPronostico+' , Dia: '+pronosticos.fechaJuego+' , Por: '+pronosticos.Liga);
         $('#IdPronosticoResultado').val(pronosticos.id);
         $('#divPronostico').hide();
         $('#divItem').hide();

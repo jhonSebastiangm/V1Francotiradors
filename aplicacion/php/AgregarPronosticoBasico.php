@@ -2,14 +2,13 @@
 
     include '../configuracion/config.php';
 
-if(isset($_POST['Equipo1'])) {
-  $Equipo1 = $_POST['Equipo1'];
-  $Equipo2 = $_POST['Equipo2'];
+if(isset($_POST['tipoPronostico'])) {
+  $tipoPronostico = $_POST['tipoPronostico'];
   $fechaJuego = $_POST['fechaJuego'];
   $Liga = $_POST['Liga'];
-  $Estadio = $_POST['Estadio'];
-  $cuota = $_POST ['cuota'];
-  $querypronosticogratuito = "INSERT INTO pronosticobasico(Equipo1, Equipo2, fechaJuego, Liga, Estadio, cuota) VALUES ('$Equipo1', '$Equipo2', '$fechaJuego', '$Liga', '$Estadio','$cuota')";
+  $cuota = $_POST['cuota'];
+  $url = $_POST['url'];
+  $querypronosticogratuito = "INSERT INTO pronosticobasico (tipoPronostico, fechaJuego, Liga, cuota, url) VALUES ('$tipoPronostico','$fechaJuego','$Liga','$cuota','$url')";
   $result = mysqli_query($connection, $querypronosticogratuito);
 
   if (!$result) {

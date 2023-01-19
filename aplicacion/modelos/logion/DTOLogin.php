@@ -19,6 +19,15 @@ class DTOLogin extends conexion{
         return $res->fetch_object(DTOLogin::class);
     }
 
+
+    public function CrearUsuario($Nombreusuario,$correo,$contrasena){
+        $this->conectar();
+        $eje = mysqli_prepare($this->con,"INSERT INTO usuario (Nombreusuario,correo,contrasena,tipoUsuario,nivel,activo,url) VALUES ('$Nombreusuario','$correo','$contrasena','0','1','0',' ')");
+       // $eje->bind_param("ssssdsssss",$this->nombre,$this->identificacion,$this->cuentabancaria,$this->nombrebanco,$this->valor,$this->correo,$this->ncelular,$this->pais,$this->ciudad,$this->descripcion);
+        $eje->execute();
+
+    }
+
  
 }
 
