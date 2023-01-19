@@ -156,7 +156,7 @@ if (empty($_SESSION["NombreUsuario"])) {
 
 
 
-    <table class="table">
+    <table class="table user_table">
       <thead>
         <th>Tipo Pronostico</th>
         <th>Descripcion</th>

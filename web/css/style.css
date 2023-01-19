@@ -280,6 +280,25 @@ opacity: 1;
     padding: 0;
     height: 100%;
   }
+
+  .user_table {
+    opacity: 0.8 !important;
+    background: #000000 0% 0% no-repeat padding-box;
+    box-shadow: 4px 4px 6px #000000;
+    border: 2px solid #AEFE00;
+    opacity: 0.2;
+    margin-top: auto;
+    margin-bottom: auto;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+
+  }
   .user_card {
     opacity: 0.8 !important;
     background: #000000 0% 0% no-repeat padding-box;
