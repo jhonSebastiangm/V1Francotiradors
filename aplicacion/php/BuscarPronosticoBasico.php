@@ -2,7 +2,7 @@
 
   include '../configuracion/config.php';
 
-  $query = "SELECT * from pronosticobasico order by id desc limit 1";
+  $query = "SELECT * from pronosticobasico WHERE Estado=1 order by id desc limit 1;";
   $result = mysqli_query($connection, $query);
   if(!$result) {
     die('Query Failed'. mysqli_error($connection));

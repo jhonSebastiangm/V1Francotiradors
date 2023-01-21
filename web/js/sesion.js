@@ -1,7 +1,7 @@
 $(document).ready(function () {
   let Nivel = 0;
   console.log("ejecutando");
-
+  let EstadoString = "";
   BuscarPronostico();
   // function CargarFrancotiradores() {
   //   console.log("ejecutand");
@@ -220,23 +220,46 @@ $(document).ready(function () {
       type: 'GET',
       success: function (response) {
         console.log(response);
-        const PronosticoBasico = JSON.parse(response);
+        const stylesEstadoPronosticoBasico = JSON.parse(response);
         let template = '';
-        PronosticoBasico.forEach(basico => {
-          template += `
-          <tr>
-          <div id="itemsBasico${basico.id}"></div>
-          <td data-label="Descripcion">${basico.tipoPronostico} liga: ${basico.Liga} fecha:${basico.fechaJuego} </td>
-          <td data-label="Cuota" id="pronosticos${basico.id}"></td>
-          <td data-label="Cuota">${basico.cuota}</td>
-          <td data-label="Estado">${basico.Estado}</td>
-          <td data-label="ejemplo"><iframe width="270" height="150" src="${basico.url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" X-Frame-Options:SAMEORIGIN allowfullscreen></iframe></td>
-        </tr>
-        `
-          CargarItemsBasico(basico.id);
-
+        stylesEstadoPronosticoBasico.forEach(basico => {
+          if(basico.Estado == 0){
+            EstadoString = "POR JUGAR";
+          }
+          if (basico.Estado == 1) {
+            $.ajax({
+              url: '../../php/ValidarPronosticoAcertado.php',
+              data: { id:basico.id },
+              type: 'GET',
+              success: function (response) {
+                let claseEstado="";
+                console.log(response);
+                EstadoString=response;
+                console.log(EstadoString.replace(/['"]+/g, ''));
+                console.log(EstadoString);
+                if (EstadoString=='"ganado"') {
+                  EstadoString='ganado';
+                }
+                if (EstadoString=='"perdido"') {
+                  EstadoString='perdido';
+                }
+                template += `
+                <tr">
+                <div id="itemsBasico${basico.id}"></div>
+                <td class="${EstadoString} data-label="Descripcion">${basico.tipoPronostico} liga: ${basico.Liga} fecha:${basico.fechaJuego} </td>
+                <td  class="${EstadoString} data-label="Cuota" id="pronosticos${basico.id}"></td>
+                <td class="${EstadoString} data-label="Cuota">${basico.cuota}</td>
+                <td class="${EstadoString} data-label="Estado">${EstadoString}</td>
+                <td class="${EstadoString} data-label="ejemplo"><iframe width="270" height="150" src="${basico.url}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" X-Frame-Options:SAMEORIGIN allowfullscreen></iframe></td>
+              </tr>
+              `
+              CargarItemsBasico(basico.id);
+              $('#pronosticos').html(template);
+              }
+            });
+          }  
         });
-        $('#pronosticos').html(template);
+        
       }
     });
   }

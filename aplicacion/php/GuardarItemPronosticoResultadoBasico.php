@@ -11,7 +11,7 @@ if(isset($_POST['idItemResultado'])) {
   $valorFinal = $_POST['valorFinal'];
   $idPronostico = $_POST['idPronostico'];
   
-  $queryInsert = "INSERT INTO resultadoitemspronosticobasico (idItemResultado, descripcion, resultadoInicial, cumple, valorFinal ) VALUES ('$idItemResultado','$descripcion','$resultadoInicial','$cumple','$valorFinal')";
+  $queryInsert = "INSERT INTO resultadoitemspronosticobasico (idItemResultado, descripcion, resultadoInicial, cumple, valorFinal, idPronostico) VALUES ('$idItemResultado','$descripcion','$resultadoInicial','$cumple','$valorFinal','$idPronostico')";
   $resultInsert = mysqli_query($connection, $queryInsert);
 
   if (!$resultInsert) {

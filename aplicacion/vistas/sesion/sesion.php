@@ -149,9 +149,9 @@ if (empty($_SESSION["NombreUsuario"])) {
         <option value="3">Completo</option>
       </select>
     <div class="row">
-      <div class="col-sm-4 DivBonitos" style="background-color:lavender;"> <input type="text" id="Banco" name="Banco" class="input_user textoNegro" placeholder="Banco"></div>
-      <div class="col-sm-4 DivBonitos" style="background-color:lavenderblush;"> <input type="text" id="ValorApuesta" name="ValorApuesta" class="input_user textoNegro" placeholder="Valor Apuesta" disabled> </div>
-      <div class="col-sm-4 DivBonitos" style="background-color:lavender;"> <input type="text" id="Ganancia" name="Ganancia" class="input_user textoNegro" placeholder="Ganancia" disabled> </div>
+      <div class="col-sm-4 DivBonitos" style="background-color:lavender;"> <label>Banco</label> <input type="text" id="Banco" name="Banco" class="input_user textoNegro" placeholder="Banco"></div>
+      <div class="col-sm-4 DivBonitos" style="background-color:lavenderblush;"> <label>Valor Apuesta</label> <input type="text" id="ValorApuesta" name="ValorApuesta" class="input_user textoNegro" placeholder="Valor Apuesta" disabled> </div>
+      <div class="col-sm-4 DivBonitos" style="background-color:lavender;"> <label>Ganancia</label> <input type="text" id="Ganancia" name="Ganancia" class="input_user textoNegro" placeholder="Ganancia" disabled> </div>
     </div>
 
 
