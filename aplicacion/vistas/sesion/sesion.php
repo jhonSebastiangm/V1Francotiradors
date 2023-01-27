@@ -62,7 +62,7 @@ if (empty($_SESSION["NombreUsuario"])) {
         <div class="d-flex align-items-center">
           <div class="site-logo">
             <a href="index.html">
-              <img class="logo" alt="Logo">
+              <img class="logo">
             </a>
           </div>
           <div class="ml-auto">
@@ -143,8 +143,8 @@ if (empty($_SESSION["NombreUsuario"])) {
           </div>
         </div>
       </div> -->
-      <select class="form-control" id="frecuencia">
-        <option value="1">Ultimo</option>
+      <select class="form-control col-md-4" id="frecuencia">
+        <option value="1">Ultimo Pronostico</option>
         <option value="2">Mes</option>
         <option value="3">Completo</option>
       </select>
